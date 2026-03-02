@@ -70,7 +70,7 @@ class SS_DOMPDF
         $filepath = File::join_paths([$folder, FileNameFilter::create()->filter($filename)]);
         $folder   = Folder::find_or_make($folder);
         $output   = $this->output();
-        $file     = new File();
+        $file     = File::create();
         $file->setFromString($output, $filepath);
         $file->ParentID = $folder->ID;
         $file->write();

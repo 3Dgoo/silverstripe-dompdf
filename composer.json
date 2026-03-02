@@ -3,10 +3,16 @@
   "description": "SilverStripe PDF Generation via DOMPDF Library",
   "type": "silverstripe-vendormodule",
   "require": {
-    "dompdf/dompdf": "^2.0",
-    "silverstripe/framework": "^4 || ^5"
+    "dompdf/dompdf": "^3.0",
+    "silverstripe/framework": "^6"
   },
   "extra": {
     "installer-name": "silverstripe-dompdf"
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "silverstripe/vendor-plugin": true
+    }
   }
 }
